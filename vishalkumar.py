@@ -1,0 +1,33 @@
+# Cryptography Security Fun Tasks With Arshil Noor Sir
+# B.C.A. First Year Technical Assignment -I
+import random
+import string
+chars= " " + string.punctuation + string.digits + string.ascii_letters
+chars=list(chars)
+key=chars.copy()
+random.shuffle(key)
+print(f"chars:{chars}")
+print(f"key:{key}")
+
+#For_Encryption
+plain_text=input("Enter your Message: ")
+cipher_text= " "
+
+for letter in plain_text:
+    index=chars.index(letter)
+    cipher_text += key[index]
+
+print("\n")
+print(f"Original Message: {plain_text}")
+print(f"Encrypted Message: {cipher_text}")
+print("\n")
+
+#For_Decryption
+cipher_text=input("Enter the Cipher Message to obtain the OriginalMessage: ")
+plain_text=" "
+
+for letter in cipher_text:
+    index=key.index(letter)
+    plain_text += chars[index]
+
+print(f"original message:{plain_text}") 
