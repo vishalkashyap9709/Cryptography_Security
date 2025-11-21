@@ -1,5 +1,5 @@
-# Cryptography Security Fun Tasks With Arshil Noor Sir
-# B.C.A. First Year Technical Assignment -I
+# A Project of Cryptography Security.
+# By Using Random And String Module.
 import random
 import string
 chars= " " + string.punctuation + string.digits + string.ascii_letters
@@ -29,5 +29,6 @@ plain_text=" "
 for letter in cipher_text:
     index=key.index(letter)
     plain_text += chars[index]
+
 
 print(f"original message:{plain_text}") 
